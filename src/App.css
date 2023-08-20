@@ -1,38 +1,58 @@
 .App {
   text-align: center;
+  margin-top: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.add-todo {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+  padding: 5px;
+  margin-right: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.draggable-item {
+  margin: 5px 0;
+}
+
+.todo-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 4px;
 }
 
-.App-link {
-  color: #61dafb;
+.drag-handle {
+  cursor: grab;
+  padding: 0 8px;
+  user-select: none;
+  /* Prevent text selection during drag */
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Styling for dragging the handle */
+.react-beautiful-dnd-drag-handle-dragging {
+  background-color: #e0e0e0;
+}
+
+.todo-content {
+  flex-grow: 1;
+  padding: 0 8px;
+}
+
+.todo-actions {
+  display: flex;
+}
+
+button {
+  padding: 3px 8px;
+  margin-left: 5px;
 }
